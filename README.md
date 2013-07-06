@@ -11,3 +11,8 @@ Make sure to create a symlink (provisioning/playbook.yml) to the playbook
 you want to test.
 
 `ln -s <playbook_you_want_to_test> provisioning/playbook.yml`
+
+Note
+====
+
+As a note, the vm is setup on a host only network @ 88.88.88.88
