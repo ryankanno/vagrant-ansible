@@ -12,9 +12,9 @@ You'll need to install:
 
 To test out my [ansible playbooks](https://github.com/ryankanno/playbooks/), you'll want to perform the following:
 
-  * Symlink the playbook directory into the roles directory <br/><br/> `ln -s <playbook_dir> roles/playbook_dir_name`
+  * Symlink the playbook directory into the roles directory <br/> `ln -s <playbook_dir> roles/playbook_dir_name`
 
-  * Symlink the playbook.yml file to provisioning/playbook.yml. <br/><br/> `ln -s <playbook_you_want_to_test> provisioning/playbook.yml`
+  * Symlink the playbook.yml file to provisioning/playbook.yml. <br/> `ln -s <playbook_you_want_to_test> provisioning/playbook.yml`
 
 Once you've setup the appropriate structure, run the following:
 
