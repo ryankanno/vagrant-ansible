@@ -32,4 +32,5 @@ To test the [nginx playbook](https://github.com/ryankanno/playbooks/tree/master/
 
 ## Note
 
-As a note, the vm is setup on a host only network @ 88.88.88.88
+  * Don't use this structure for a production setup; follow Ansible [best practices](http://www.ansibleworks.com/docs/bestpractices.html)
+  * VM is setup on a host only network @ 88.88.88.88
