@@ -5,22 +5,30 @@ my [ansible playbooks](https://github.com/ryankanno/playbooks/).
 
 ## Getting started
 
-You'll need to install the following:
+You'll need to install:
 
-  * [Vagrant](http://downloads.vagrantup.com/)
-  * [Ansible](http://www.ansibleworks.com/docs/gettingstarted.html)
+  * [Vagrant 1.2.2](http://downloads.vagrantup.com/)
+  * [Ansible 2.1](http://www.ansibleworks.com/docs/gettingstarted.html)
 
-(The following has been tested on Vagrant 1.2.2 and Ansible 1.2)
+To test out my [ansible playbooks](https://github.com/ryankanno/playbooks/), you'll want to perform the following:
 
-To test out the [ansible playbooks](https://github.com/ryankanno/playbooks/), 
-make sure to create a symlink @ provisioning/playbook.yml to the playbook 
-you want to test.
+  * Symlink the playbook directory into the roles directory <br/><br/> `ln -s <playbook_dir> roles/playbook_dir_name`
 
-`ln -s <playbook_you_want_to_test> provisioning/playbook.yml`
+  * Symlink the playbook.yml file to provisioning/playbook.yml. <br/><br/> `ln -s <playbook_you_want_to_test> provisioning/playbook.yml`
 
-For example, to test out the [nginx playbook](https://github.com/ryankanno/playbooks/tree/master/nginx),
-you'll want to create a symlink from [example-playbook.yml](https://github.com/ryankanno/playbooks/blob/master/nginx/example-playbook.yml)
-to provisioning/playbook.yml.
+Once you've setup the appropriate structure, run the following:
+
+  * `vagrant up`
+  * `vagrant provision`
+
+Voila. Happy VM'ing.
+
+### Example: Testing out the nginx playbook
+
+To test the [nginx playbook](https://github.com/ryankanno/playbooks/tree/master/nginx), you'll want to perform the following:
+
+  * Create a symlink from the [nginx playbook directory](https://github.com/ryankanno/playbooks/tree/master/nginx) to roles/nginx
+  * Create a symlink from [example-playbook.yml](https://github.com/ryankanno/playbooks/blob/master/nginx/example-playbook.yml) to provisioning/playbook.yml
 
 ## Note
 
