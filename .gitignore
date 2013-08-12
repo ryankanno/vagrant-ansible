@@ -1,1 +1,6 @@
+# Ignore vagrant things
+.vagrant
+
+# Ignore ansible things
 provisioning/playbook.yml
+provisioning/roles/*
