@@ -1,0 +1,2 @@
+ROLES_ENABLED="<path_to_vagrant_ansible_project_provisioning_roles_directory_lives>"
+ROLES_AVAILABLE="<path_where_all_your_playbook_roles_being_tested_live>"

@@ -4,3 +4,6 @@
 # Ignore ansible things
 provisioning/playbook.yml
 provisioning/roles/*
+
+# Ignore cfg things
+.vagrant-ansible-cfg
