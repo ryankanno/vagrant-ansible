@@ -12,11 +12,16 @@ You'll need to install:
 
 To test out my [ansible playbooks](https://github.com/ryankanno/playbooks/), you'll want to perform the following:
 
-  * Symlink the playbook directory into the roles directory <br/> `ln -s <playbook_dir> roles/playbook_dir_name`
+  * Create a configuration file named .vagrant-ansible-cfg [example](https://raw.github.com/ryankanno/vagrant-ansible/master/.vagrant-ansible-cfg.example)
+    * ROLES_ENABLED - Should point to the project path <project_root>/provisioning/roles.
+    * ROLES_AVAILABLE - Should point to the path where your playbooks are installed.
 
-  * Symlink the playbook.yml file to provisioning/playbook.yml. <br/> `ln -s <playbook_you_want_to_test> provisioning/playbook.yml`
+  * Run `./enrole.sh <ROLE>` to enable a role (defaults to -h with no <ROLE>)
+  * Make sure to add the role to playbook.yml in the provisioning directory
 
-Once you've setup the appropriate structure, run the following:
+  * Run `./disrole.sh <ROLE>` to disable a role (defaults to -h with no <ROLE>)
+
+Once you've enabled a role, run the following:
 
   * `vagrant up`
   * `vagrant provision`
@@ -27,7 +32,8 @@ Voila. Happy VM'ing.
 
 To test the [nginx playbook](https://github.com/ryankanno/playbooks/tree/master/nginx), you'll want to perform the following:
 
-  * Create a symlink from the [nginx playbook directory](https://github.com/ryankanno/playbooks/tree/master/nginx) to roles/nginx
+  * Ensure you have a configuration file named .vagrant-ansible-cfg 
+  * `./enrole.sh nginx`
   * Create a symlink from [example-playbook.yml](https://github.com/ryankanno/playbooks/blob/master/nginx/example-playbook.yml) to provisioning/playbook.yml
 
 ## Note
