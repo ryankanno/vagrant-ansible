@@ -8,26 +8,28 @@ my [ansible playbooks](https://github.com/ryankanno/playbooks/).
 You'll need to install:
 
   * [Vagrant 1.2.2](http://downloads.vagrantup.com/)
-  * [Ansible 2.1](http://www.ansibleworks.com/docs/gettingstarted.html)
+  * [Ansible 1.2+](http://www.ansibleworks.com/docs/gettingstarted.html)
 
 To test out my [ansible playbooks](https://github.com/ryankanno/playbooks/), you'll want to perform the following:
 
-  * Create a configuration file named .vagrant-ansible-cfg [example](https://raw.github.com/ryankanno/vagrant-ansible/master/.vagrant-ansible-cfg.example)
-    * ROLES_ENABLED - Should point to the project path <project_root>/provisioning/roles.
+  * Create a configuration file named .vagrant-ansible-cfg ([example](https://raw.github.com/ryankanno/vagrant-ansible/master/.vagrant-ansible-cfg.example))
+    * ROLES_ENABLED - Should point to the project path %lt;project_root&gt;/provisioning/roles.
     * ROLES_AVAILABLE - Should point to the path where your playbooks are installed.
 
-  * Run `./enrole.sh <ROLE>` to enable a role (defaults to -h with no <ROLE>)
+  * Run `./enrole.sh <ROLE>` to enable a role (defaults to -h with no &lt;ROLE&gt;)
 
-  * Create a playbook.yml file [example](https://raw.github.com/ryankanno/vagrant-ansible/master/provisioning/playbook.yml.example)
+  * Create a playbook.yml file in provisioning directory ([example](https://raw.github.com/ryankanno/vagrant-ansible/master/provisioning/playbook.yml.example))
 
-  * Make sure to add the role to the playbook.yml in the provisioning directory
-
-  * Run `./disrole.sh <ROLE>` to disable a role (defaults to -h with no <ROLE>)
+  * Make sure to add the role to the playbook.yml
 
 Once you've enabled a role, run the following:
 
   * `vagrant up`
   * `vagrant provision`
+
+After you're done testing:
+
+  * Run `./disrole.sh <ROLE>` to disable a role (defaults to -h with no &lt;ROLE&gt;)
 
 Voila. Happy VM'ing.
 
