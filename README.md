@@ -13,7 +13,7 @@ You'll need to install:
 To test out my [ansible playbooks](https://github.com/ryankanno/playbooks/), you'll want to perform the following:
 
   * Create a configuration file named .vagrant-ansible-cfg ([example](https://raw.github.com/ryankanno/vagrant-ansible/master/.vagrant-ansible-cfg.example))
-    * ROLES_ENABLED - Should point to the project path %lt;project_root&gt;/provisioning/roles.
+    * ROLES_ENABLED - Should point to the project path &lt;project_root&gt;/provisioning/roles.
     * ROLES_AVAILABLE - Should point to the path where your playbooks are installed.
 
   * Run `./enrole.sh <ROLE>` to enable a role (defaults to -h with no &lt;ROLE&gt;)
@@ -39,7 +39,7 @@ To test the [nginx playbook](https://github.com/ryankanno/playbooks/tree/master/
 
   * Ensure you have a configuration file named .vagrant-ansible-cfg 
   * `./enrole.sh nginx`
-  * Add the nginx role to your playbook.yml file [example](https://github.com/ryankanno/playbooks/blob/master/nginx/example-playbook.yml)
+  * Add the nginx role to your playbook.yml file ([example](https://github.com/ryankanno/playbooks/blob/master/nginx/example-playbook.yml))
 
 ## Note
 
