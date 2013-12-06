@@ -38,15 +38,34 @@ then
         echo "Role $1 was successfully disabled"
         exit 0
 else
+        AVAILABLE_ROLES=`ls -l $ROLES_ENABLED | grep ^l | awk '{ print " * " $9 }'`
         if [[ $1 == "all" ]]
         then
-            rm $ROLES_ENABLED/*
-            echo "All roles were successfully disabled"
-            exit 0
+            if [[ -z "$AVAILABLE_ROLES" ]]
+            then
+                echo "There are no roles in $ROLES_ENABLED to disable."
+                exit 0
+            else
+                while true; do
+                    echo "You will disable all the following roles: "
+                    echo -e "$AVAILABLE_ROLES\n"
+                    read -p "Are you sure you wish to continue? [y, N] " choice
+                    case "$choice" in
+                        y|Y)
+                            rm $ROLES_ENABLED/*
+                            echo "All roles were successfully disabled."
+                            exit 0;;
+                        n|N|"")
+                            echo "You selected no. No roles were disabled."
+                            exit 0;;
+                        *) echo -e "Please answer with y/n.\n";;
+                    esac
+                done
+            fi
         else
             echo -e "Role $1 was not found in $ROLES_ENABLED\n"
             echo "Roles available to disable:"
-            ls -l $ROLES_ENABLED | grep ^l | awk '{ print " * " $9 }'
+            echo -e "$AVAILABLE_ROLES"
             exit 1
         fi
 fi
