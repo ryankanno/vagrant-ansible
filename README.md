@@ -31,15 +31,19 @@ After you're done testing:
 
   * Run `./disrole.sh <ROLE>` to disable a role (defaults to -h with no &lt;ROLE&gt;)
 
+Note:
+
+  * Run `./disrole.sh all` to disable all roles (defaults to no, may change that option later since it's explicit)
+
 Voila. Happy VM'ing.
 
-### Example: Testing out the nginx playbook
+### Example: Testing out the apt playbook
 
-To test the [nginx playbook](https://github.com/ryankanno/playbooks/tree/master/nginx), you'll want to perform the following:
+To test the [apt playbook](https://github.com/ryankanno/playbooks/tree/master/apt), you'll want to perform the following:
 
   * Ensure you have a configuration file named .vagrant-ansible-cfg 
-  * `./enrole.sh nginx`
-  * Add the nginx role to your playbook.yml file ([example](https://github.com/ryankanno/playbooks/blob/master/nginx/example-playbook.yml))
+  * `./enrole.sh apt`
+  * Add the apt role to your playbook.yml file
 
 ## Note
 
