@@ -38,8 +38,15 @@ then
         echo "Role $1 was successfully disabled"
         exit 0
 else
-        echo -e "Role $1 was not found in $ROLES_ENABLED\n"
-        echo "Roles available to disable:"
-        ls -l $ROLES_ENABLED | grep ^l | awk '{ print " * " $9 }'
-        exit 1
+        if [[ $1 == "all" ]]
+        then
+            rm $ROLES_ENABLED/*
+            echo "All roles were successfully disabled"
+            exit 0
+        else
+            echo -e "Role $1 was not found in $ROLES_ENABLED\n"
+            echo "Roles available to disable:"
+            ls -l $ROLES_ENABLED | grep ^l | awk '{ print " * " $9 }'
+            exit 1
+        fi
 fi
